@@ -10,7 +10,7 @@ import 'swiper/css/autoplay';
 const Mainslider = () => {
   return (
    <>
-   <div className='w-[90vw] mt-[-2%] lg:h-[500px] md:h-[380px] sm:h-[220px] ml-[5vw] rounded-[20px] z-20'>
+   <div className='w-[90vw] h-[220px] mt-[-2%] lg:h-[500px] md:h-[380px] sm:h-[220px] ml-[5vw] rounded-[20px] z-20'>
     <Swiper
     modules={[Autoplay,Pagination]}
     spaceBetween={30}
