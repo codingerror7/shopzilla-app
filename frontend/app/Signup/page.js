@@ -66,9 +66,9 @@ const page = () => {
             </div>
             <div className='mt-[7%] ml-[13%]'>
                <TextField type={eye?"text":"password"} className='border-[1px] border-black p-[5px] ml-[10%] rounded-[20px] w-[80%] font-[gilroy]' name='password' {...register('password',{required:true})} id="outlined-basic" label="password" variant="outlined" />
-               {eye?(<IoMdEye className='absolute right-27 top-[50%] lg:right-27 lg:top-[55%] cursor-pointer text-[20px]' onClick={()=>{
+               {eye?(<IoMdEye className='hidden lg:block md:block absolute right-27 top-[50%] lg:right-27 lg:top-[55%] cursor-pointer text-[20px]' onClick={()=>{
                 seteye(prev=>!prev)
-               }}/>) : (<IoIosEyeOff className='absolute right-27 top-[50%] lg:right-27 lg:top-[55%] cursor-pointer text-[20px]' onClick={()=>{
+               }}/>) : (<IoIosEyeOff className='hidden lg:block md:block    absolute right-27 top-[50%] lg:right-27 lg:top-[55%] cursor-pointer text-[20px]' onClick={()=>{
                 seteye(prev=>!prev);
                }}/>)}
               {errors.password && <p className='text-red-700'>password is required.</p>}
