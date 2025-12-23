@@ -1,6 +1,6 @@
 import User from "../model/auth.model.js";
 import genToken from "../config/token.config.js";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 
 //SIGNUP
 export const signUp = async (req,res) => {
