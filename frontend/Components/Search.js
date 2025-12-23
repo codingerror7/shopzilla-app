@@ -12,7 +12,7 @@ import { routerServerGlobal } from 'next/dist/server/lib/router-utils/router-ser
 const Search = () => {
   return (
     <>
-     <div className='w-[180px] px-3 lg:w-[380px] md:w-[300px] sm:w-full'>
+     <div className='w-[120px] px-3 lg:w-[380px] md:w-[300px] sm:w-full'>
       <Box sx={{ width : "100%" }}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Search by category</InputLabel>

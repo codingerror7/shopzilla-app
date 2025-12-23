@@ -58,11 +58,11 @@ const Navbar = () => {
         </li>
       </ul>
     </div>}
-    <div className='h-[10%] w-[100%] sm:h-[12%] md:h-[15%] lg:h-[15%] font-[gilroy] bg-[#ffffff90] backdrop-blur-sm p-4 md:p-6 lg:p-8 flex items-center justify-between fixed z-40 gap-8 lg:gap-0'>
+    <div className='h-[10%] w-[100%] sm:h-[12%] md:h-[15%] lg:h-[15%] font-[gilroy] bg-[#ffffff90] backdrop-blur-sm p-2 md:p-6 lg:p-8 flex items-center justify-between fixed z-40 gap-6 lg:gap-0'>
         <div className='flex items-center justify-between'>
             
-            <div className='flex items-center gap-2'>
-                <h1 className='text-orange-800 text-[28px] font-extrabold sm:text-[32px] md:text-[38px] lg:text-[40px]'>Shopzilla</h1><FaShoppingBag className='text-orange-700 text-[34px] sm:text-[40px]md:text-[46px] lg:text-[50px] ' />
+            <div className='flex items-center'>
+                <h1 className='text-orange-800 text-[17px] font-extrabold sm:text-[32px] md:text-[38px] lg:text-[40px]'>Shopzilla</h1><FaShoppingBag className='text-orange-700 text-[20px] sm:text-[40px]md:text-[46px] lg:text-[50px] ' />
             </div>
             <Search/>
         </div>
@@ -72,7 +72,7 @@ const Navbar = () => {
               setpopup(true)
             }} onMouseLeave={()=>{
               setpopup(false)
-            }} className='flex items-center justify-between gap-2 font-[gilroy] rounded-[20px] text-[11px] sm:text-[14px] lg:text-[14px] bg-indigo-950 text-white font-semibold text-center  px-5 py-2 cursor-pointer'>Profile<MdOutlineAccountCircle className='text-[13px] lg:text-[20px]'/></button>) : (<Link href='./Signup' className='font-[gilroy] rounded-[20px] text-[12px] lg:text-[14px] bg-indigo-950 text-white font-semibold text-center p-[8px] px-5 py-2 hover:bg-transparent hover:text-violet-950'>Signup</Link>)}
+            }} className='flex items-center justify-between gap-2 font-[gilroy] rounded-[20px] text-[8px] sm:text-[14px] lg:text-[14px] bg-indigo-950 text-white font-semibold text-center px-3 py-1  lg:px-5 lg:py-2 cursor-pointer'>Profile<MdOutlineAccountCircle className='text-[10px] lg:text-[20px]'/></button>) : (<Link href='./Signup' className='font-[gilroy] rounded-[20px] text-[12px] lg:text-[14px] bg-indigo-950 text-white font-semibold text-center p-[8px] px-5 py-2 hover:bg-transparent hover:text-violet-950'>Signup</Link>)}
           <Link href='./Cart'><IconButton size = "large" sx={{
             color : "black",
           }}>
