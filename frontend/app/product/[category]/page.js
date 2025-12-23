@@ -121,7 +121,7 @@ const [alert, setalert] = useState(false);
   const addToCart = async (productId) => {
     try {
       const userId = await localStorage.getItem("userId");
-      const res = await axios.post("http://localhost:8000/api/add-to-cart",{userId , productId});
+      const res = await axios.post("https://shopzilla-ecommerce-9anv.onrender.com/api/add-to-cart",{userId , productId});
       console.log(res.data.cart,"added");
       setalert(true);
     } catch (error) {
@@ -140,7 +140,7 @@ const [alert, setalert] = useState(false);
   try {
     const userId = localStorage.getItem("userId");
 
-    const res = await axios.post("http://localhost:8000/api/order/buy-now", {
+    const res = await axios.post("https://shopzilla-ecommerce-9anv.onrender.com/api/order/buy-now", {
       userId,
       productId,
       quantity: 1,

@@ -17,7 +17,7 @@ const payNow = async () => {
   return;
 }
 
-  const res = await axios.post("http://localhost:8000/api/order/create-payment", {
+  const res = await axios.post("https://shopzilla-ecommerce-9anv.onrender.com/api/order/create-payment", {
     amount: order.total,
     orderId: order._id
   });
@@ -29,7 +29,7 @@ const payNow = async () => {
     order_id: res.data.razorpayOrderId,
 
     handler: async function (response) {
-      await axios.post("http://localhost:8000/api/order/confirm", {
+      await axios.post("https://shopzilla-ecommerce-9anv.onrender.com/api/order/confirm", {
         orderId: order._id,
         paymentId: response.razorpay_payment_id,
       });
@@ -53,7 +53,7 @@ const cancelOrder = () => {
   useEffect(()=>{
     async function fetchOrders(){
         try {
-            let res = await axios.get(`http://localhost:8000/api/order/${orderId}`);
+            let res = await axios.get(`https://shopzilla-ecommerce-9anv.onrender.com/api/order/${orderId}`);
             let data = res.data;
             setorder(data);
         } catch (error) {
