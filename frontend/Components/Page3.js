@@ -8,7 +8,7 @@ const Page3 = () => {
   
   return (
     <>
-    <div className='h-[230vh] lg:min-h-[250vh] w-[100%] bg-indigo-950 overflow-hidden'>
+    <div className='h-[250vh] lg:min-h-[250vh] w-[100%] bg-indigo-950 overflow-hidden'>
       <Autoslider/>
      <section className="py-12 px-4 sm:px-8 md:px-20 bg-transparent">
 <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center text-white font-[gilroy] mt-10 mb-10">Featured Categories</h2>
