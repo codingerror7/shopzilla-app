@@ -21,7 +21,7 @@ const page = () => {
     const [alert, setalert] = useState(false);
   const onSubmit= async (data)=>{
     try {
-      let res = await axios.post("https://shopzilla-ecommerce-9anv.onrender.com/api/auth/login",data);
+      let res = await axios.post("https://shopzilla-ecommerce-9anv.onrender.com/api/auth/login",data,{ withCredentials: true });
       localStorage.setItem("token",res.data.token);
       alert("login successfull");
       router.push("/");

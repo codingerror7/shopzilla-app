@@ -21,7 +21,7 @@ const page = () => {
   const [alert, setalert] = useState(false);
   const onSubmit = async (data)=>{
     try {
-      let res = await axios.post("https://shopzilla-ecommerce-9anv.onrender.com/api/auth/signup",data);
+      let res = await axios.post("https://shopzilla-ecommerce-9anv.onrender.com/api/auth/signup",data,{ withCredentials: true });
       localStorage.setItem("token",res.data.token);
       console.log(res.data.user);
       localStorage.setItem("userId",res.data.user._id);

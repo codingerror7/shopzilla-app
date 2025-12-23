@@ -20,7 +20,7 @@ const payNow = async () => {
   const res = await axios.post("https://shopzilla-ecommerce-9anv.onrender.com/api/order/create-payment", {
     amount: order.total,
     orderId: order._id
-  });
+  },{ withCredentials: true });
 
   const options = {
     key: process.env.NEXT_PUBLIC_RAZORPAY_KEY,
@@ -32,7 +32,7 @@ const payNow = async () => {
       await axios.post("https://shopzilla-ecommerce-9anv.onrender.com/api/order/confirm", {
         orderId: order._id,
         paymentId: response.razorpay_payment_id,
-      });
+      },{ withCredentials: true });
 
       alert("Payment Successful!");
       router.push("/");
@@ -53,7 +53,7 @@ const cancelOrder = () => {
   useEffect(()=>{
     async function fetchOrders(){
         try {
-            let res = await axios.get(`https://shopzilla-ecommerce-9anv.onrender.com/api/order/${orderId}`);
+            let res = await axios.get(`https://shopzilla-ecommerce-9anv.onrender.com/api/order/${orderId}`,{ withCredentials: true });
             let data = res.data;
             setorder(data);
         } catch (error) {

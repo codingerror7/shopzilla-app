@@ -11,7 +11,13 @@ const app = express();
 //CONFIGURING .ENV FILE
 dotenv.config();
 //CROSS-ORIGIN RESOURCE SHARING
-app.use(cors());
+app.set("trust proxy", 1);
+
+app.use(cors({
+  origin: "https://shopzilla-app-4ray.onrender.com",
+  credentials: true
+}));
+
 app.use(express.json());
 app.use(cookieParser());
 //CONNECTING ROUTES

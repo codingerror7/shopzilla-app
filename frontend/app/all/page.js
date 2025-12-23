@@ -28,7 +28,7 @@ export default function page({params}){
     useEffect(()=>{
         async function getAll(){
             try {
-                let res = await axios.get("https://shopzilla-ecommerce-9anv.onrender.com/api/product/all");
+                let res = await axios.get("https://shopzilla-ecommerce-9anv.onrender.com/api/product/all",{ withCredentials: true });
                 let data = res.data;
                 setproducts(data)
                 console.log("response:",data);
@@ -82,7 +82,7 @@ export default function page({params}){
   const addToCart = async (productId) => {
     try {
       const userId = await localStorage.getItem("userId");
-      const res = await axios.post("https://shopzilla-ecommerce-9anv.onrender.com/api/add-to-cart",{userId , productId});
+      const res = await axios.post("https://shopzilla-ecommerce-9anv.onrender.com/api/add-to-cart",{userId , productId},{ withCredentials: true });
       console.log(res.data.cart,"added");
       setAlert(true);
     } catch (error) {
@@ -106,7 +106,7 @@ useEffect(()=>{
       userId,
       productId,
       quantity: 1,
-    });
+    },{ withCredentials: true });
     const orderId = res.data.order._id;
     localStorage.setItem("orderId",orderId);
     router.push(`/order-summary/${orderId}`);

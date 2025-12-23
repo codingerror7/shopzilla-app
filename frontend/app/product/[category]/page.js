@@ -43,7 +43,7 @@ export default function Page({params}){  //PARAMS ISLIYE ANDAR LIKHA KYUKI NEXTJ
         async function fetchProducts(){
             try {
                 //request to call backend to give listings
-                let res = await axios.get(`http://localhost:8000/api/product/${category}`);
+                let res = await axios.get(`https://shopzilla-ecommerce-9anv.onrender.com/api/product/${category}`,{ withCredentials: true });
                 let data = res.data;  ///axios me res.json use nii krte, ye automaticcally json handle kr leta h, and usko res.data k andar store kra leta h.
                 setproduct(data);   //hmare empty array m values insert kr rhe h.
                 console.log(category);
@@ -121,7 +121,7 @@ const [alert, setalert] = useState(false);
   const addToCart = async (productId) => {
     try {
       const userId = await localStorage.getItem("userId");
-      const res = await axios.post("https://shopzilla-ecommerce-9anv.onrender.com/api/add-to-cart",{userId , productId});
+      const res = await axios.post("https://shopzilla-ecommerce-9anv.onrender.com/api/add-to-cart",{userId , productId},{ withCredentials: true });
       console.log(res.data.cart,"added");
       setalert(true);
     } catch (error) {
@@ -144,7 +144,7 @@ const [alert, setalert] = useState(false);
       userId,
       productId,
       quantity: 1,
-    });
+    },{ withCredentials: true });
     const orderId = res.data.order._id;
     localStorage.setItem("orderId",orderId);
     router.push(`/order-summary/${orderId}`);

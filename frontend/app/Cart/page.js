@@ -13,7 +13,7 @@ const page = () => {
         if(!userId){
           return console.log("user id not exist");
         }
-        const res = await axios.get(`https://shopzilla-ecommerce-9anv.onrender.com/api/cart/${userId}`);
+        const res = await axios.get(`https://shopzilla-ecommerce-9anv.onrender.com/api/cart/${userId}`,{ withCredentials: true });
         let data = res.data;
         setcart(data);
         console.log("item added to cart");
