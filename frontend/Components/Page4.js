@@ -5,7 +5,7 @@ import Timer from './Timer'
 const Page4 = () => {
   return (
     <>
-        <div className='min-h-[195vh] w-full bg-white overflow-hidden'>
+        <div className='min-h-[210vh] w-full bg-white overflow-hidden'>
           <section className="py-10 px-4 sm:px-6 md:px-20 bg-white">
 <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-4 sm:mb-5">New Arrivals</h2>
 <p className='text-red-600 text-center text-xl sm:text-2xl font-semibold mb-6'>We will reveal them shortly!</p>

@@ -17,7 +17,7 @@ const Slider1 = () => {
       simulateTouch={true}
       mousewheel={false}
       breakpoints={{
-    320: { slidesPerView: 1 },  // mobile
+    320: { slidesPerView: 2 },  // mobile
     480: { slidesPerView: 2 },  // small tablets
     768: { slidesPerView: 3 },  // tablets
     1024: { slidesPerView: 4 }, // laptops
