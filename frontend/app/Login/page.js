@@ -54,16 +54,16 @@ const page = () => {
         <FaShoppingBag className='ml-1 text-[65px] md:text-[80px] text-orange-700' />
       </span>
     </h1>
-            <form onSubmit={handleSubmit(onSubmit)} className='bg-[#f8eded] w-[90%] sm:w-[60%] md:w-[40%] lg:w-[30%] h-[30vh] lg:min-h-[55vh] rounded-[20px] p-8 mt-10 shadow-xl relative'>
+            <form onSubmit={handleSubmit(onSubmit)} className='bg-[#f8eded] w-[90%] sm:w-[60%] md:w-[40%] lg:w-[30%] h-[40vh] lg:min-h-[55vh] rounded-[20px] p-8 mt-10 shadow-xl relative'>
                 <div className='mt-[7%] ml-[13%]'>
                   <TextField type='email' className='border-[1px] border-black p-[5px] ml-[10%] rounded-[20px] w-[80%] font-[gilroy]' name='email' {...register('email',{required:true})} id="outlined-basic" label="email" variant="outlined" />
                   {errors.email && <p className='text-red-700'>email is required.</p>}
                 </div>
                 <div className='mt-[7%] ml-[13%]'>
                    <TextField type={eye?"text":"password"} className='border-[1px] border-black p-[5px] ml-[10%] rounded-[20px] w-[80%] font-[gilroy]' name='password' {...register('password',{required:true})} id="outlined-basic" label="password" variant="outlined" />
-                   {eye?(<IoMdEye className='absolute right-32 top-[48%] lg:right-27 lg:top-[42%] cursor-pointer text-[20px]' onClick={()=>{
+                   {eye?(<IoMdEye className='absolute right-26 top-[40%] lg:right-27 lg:top-[42%] cursor-pointer text-[20px]' onClick={()=>{
                     seteye(prev=>!prev)
-                   }}/>) : (<IoIosEyeOff className='absolute right-32 top-[48%] lg:right-27 lg:top-[42%] cursor-pointer text-[20px]' onClick={()=>{
+                   }}/>) : (<IoIosEyeOff className='absolute right-26 top-[40%] lg:right-27 lg:top-[42%] cursor-pointer text-[20px]' onClick={()=>{
                     seteye(prev=>!prev);
                    }}/>)}
                   {errors.password && <p className='text-red-700'>password is required.</p>}

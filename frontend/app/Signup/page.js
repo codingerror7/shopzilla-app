@@ -47,7 +47,7 @@ const page = () => {
 
   return (
     <>
-    <div className='h-[70vh] lg:min-h-[100vh] w-full bg-indigo-950 flex flex-col items-center justify-start pt-[5%] overflow-hidden'>
+    <div className='h-[80vh] lg:min-h-[100vh] w-full bg-indigo-950 flex flex-col items-center justify-start pt-[5%] overflow-hidden'>
         <h1 className='font-[gilroy] text-[45px] md:text-[60px] text-center text-white font-extrabold'>
   Welcome to 
   <span className='text-orange-800 ml-2 text-[55px] md:text-[70px] font-extrabold inline-flex items-center'>
@@ -55,7 +55,7 @@ const page = () => {
     <FaShoppingBag className='ml-1 text-[65px] md:text-[80px] text-orange-700' />
   </span>
 </h1>
-        <form onSubmit={handleSubmit(onSubmit)} className='bg-[#f8eded] w-[90%] sm:w-[60%] md:w-[40%] lg:w-[30%] h-[40vh] lg:min-h-[65vh] rounded-[20px] p-8 mt-10 shadow-xl relative'>
+        <form onSubmit={handleSubmit(onSubmit)} className='bg-[#f8eded] w-[90%] sm:w-[60%] md:w-[40%] lg:w-[30%] h-[50vh] lg:min-h-[65vh] rounded-[20px] p-8 mt-10 shadow-xl relative'>
             <div className='mt-[8%] ml-[13%]'>
               <TextField type='text' className='border-[1px] border-black p-[5px] ml-[10%] rounded-[20px] w-[80%] font-[gilroy]' name='name' {...register('name',{required:true})} id="outlined-basic" label="username" variant="outlined" />
               {errors.name && <p className='text-red-700'>username is required.</p>}
@@ -66,9 +66,9 @@ const page = () => {
             </div>
             <div className='mt-[7%] ml-[13%]'>
                <TextField type={eye?"text":"password"} className='border-[1px] border-black p-[5px] ml-[10%] rounded-[20px] w-[80%] font-[gilroy]' name='password' {...register('password',{required:true})} id="outlined-basic" label="password" variant="outlined" />
-               {eye?(<IoMdEye className='absolute right-32 top-[55%] lg:right-27 lg:top-[55%] cursor-pointer text-[20px]' onClick={()=>{
+               {eye?(<IoMdEye className='absolute right-27 top-[50%] lg:right-27 lg:top-[55%] cursor-pointer text-[20px]' onClick={()=>{
                 seteye(prev=>!prev)
-               }}/>) : (<IoIosEyeOff className='absolute right-32 top-[55%] lg:right-27 lg:top-[55%] cursor-pointer text-[20px]' onClick={()=>{
+               }}/>) : (<IoIosEyeOff className='absolute right-27 top-[50%] lg:right-27 lg:top-[55%] cursor-pointer text-[20px]' onClick={()=>{
                 seteye(prev=>!prev);
                }}/>)}
               {errors.password && <p className='text-red-700'>password is required.</p>}
