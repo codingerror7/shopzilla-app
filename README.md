@@ -65,23 +65,4 @@ ShopZilla/
 │
 └── README.md
 
-🌍 Deployment
 
-Frontend: Vercel / Netlify
-Backend: Render / Railway / AWS
-Database: MongoDB Atlas
-
-🤝 Contributing
-
-Contributions are welcome!
-Feel free to fork the repo and submit a pull request.
-
-👨‍💻 Author
-
-Sujal Saraswat
-Full Stack Developer
-B.Tech CSE (2023–2027)
-
-⭐ Support
-
-If you like this project, consider giving it a ⭐ on GitHub!
